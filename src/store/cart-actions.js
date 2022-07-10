@@ -1,6 +1,8 @@
 import { uiActions } from "./ui-slice";
 import { cartActions } from "./cart-slice";
 
+
+// thunk, funckja, która zwraca funkcję. 
 export const fetchCartData = (cart) => {
 	return async (dispatch) => {
 		const fetchData = async () => {
