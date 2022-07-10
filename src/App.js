@@ -9,7 +9,7 @@ import { sendCartData, fetchCartData } from './store/cart-actions'
 
 let isInitialized = true;
 
-function App() {
+const App = () => {
   const cartIsVisible = useSelector(state => state.ui.cartIsVisible)
   const cart = useSelector(state => state.cart)
   const dispatch = useDispatch()
