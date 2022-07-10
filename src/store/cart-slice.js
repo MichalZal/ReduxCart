@@ -15,6 +15,7 @@ const cartSlice = createSlice({
 		addItemToCart(state, action) {
 			const newItem = action.payload;
       // podanego itema w payloadzie dodajemy do zmiennej
+			
 			const existingItem = state.items.find((item) => item.id === newItem.id);
 			// potem sprawdzamy czy taki item już istnieje w koszyku
 			state.totalQuantity++;
@@ -32,6 +33,7 @@ const cartSlice = createSlice({
         existingItem.totalPrice += newItem.price
       }
       // jeśli nie to dodajemy ten nowy item do koszyka
+			
 		},
 
 		removeItemFromCart(state, action) {
@@ -53,5 +55,3 @@ const cartSlice = createSlice({
 
 export const cartActions = cartSlice.actions
 export default cartSlice
-
-
